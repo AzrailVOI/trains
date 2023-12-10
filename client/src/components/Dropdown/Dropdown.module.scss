@@ -1,0 +1,146 @@
+@import "../../consts/colors.scss";
+
+.main{
+  position: relative;
+  min-width: 25%;
+}
+.fadeOut{
+  animation: fadeOut .3s linear !important;
+  opacity: 0 !important;
+  z-index: -1 !important;
+}
+.none{
+  display: none !important;
+}
+.dropdown{
+  display: flex;
+  text-align: center;
+  background-color: $blue;
+  padding: .7rem 1.5rem;
+  border-radius: .7rem;
+  outline: .15rem solid $black;
+  font-size: 20pt;
+  transition: .3s linear;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 20rem;
+  &:hover{
+    transition: .3s linear;
+    background-color: $dark_blue;
+    color: $white;
+  }
+  >svg{
+    transition: .2s linear;
+  }
+  &_menu{
+    transition: .2s linear;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    right: 0;
+    background: $dark_blue;
+    border-radius: .7rem;
+    outline: .15rem solid $black;
+    padding: .3rem;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn .3s linear;
+    z-index: 9999;
+    &_search{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      >input{
+        background: inherit;
+        outline: none;
+        border: none;
+        font-size: 15pt;
+        flex-grow: 1;
+      }
+      >svg{
+        cursor: pointer;
+      }
+    }
+    &_cities{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-top:2rem;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      max-height: 15rem;
+      align-items: center;
+      >div{
+        cursor: pointer;
+        width: 90%;
+        transition: all .3s linear;
+        &:hover{
+          width: 92.5%;
+        }
+      }
+      &::-webkit-scrollbar{
+        width: .3rem;
+        background: inherit;
+        border-radius: .5rem;
+      }
+      &::-webkit-scrollbar-thumb{
+        background: $white;
+        border-radius: .5rem;
+      }
+      &::-webkit-scrollbar-track{
+        background: inherit;
+      }
+    }
+  }
+}
+.activeIcon{
+  transform: rotate(180deg);
+}
+.line{
+  position: absolute;
+  width: 100%;
+  height: .15rem;
+  background: $black;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+@keyframes fadeIn {
+  from{
+      opacity: 0;
+  }
+  to  {
+      opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from{
+      opacity: 1;
+  }
+  to  {
+      opacity: 0;
+  }
+}
+@media (max-width:480px) {
+  .dropdown{
+    font-size: 12pt;
+    min-width: 12rem;
+    >*{
+      font-size: 12pt;
+    }
+    &_menu{
+      &_search{
+        gap: .5rem;
+        >input{
+          font-size: 10pt;
+        }
+        font-size: 10pt;
+      }
+    }
+  }
+}

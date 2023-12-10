@@ -1,0 +1,45 @@
+@import "../../consts/colors.scss";
+.root{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.3rem;
+  backdrop-filter: blur(.1rem);
+  //background: rgba(3, 3, 3, .4);
+}
+
+.way{
+  background: $dark_blue;
+  height: 72%;
+  width: 92%;
+  border-radius: 1rem;
+  outline: .15rem solid $black;
+  display: flex;
+  flex-direction: column;
+  &_x{
+    >svg{
+      &:hover{
+        cursor: pointer;
+        fill: $red;
+      }
+    }
+  }
+  &_header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  &_head{
+    display: flex;
+    gap: 1rem;
+  }
+  &_body{
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+}

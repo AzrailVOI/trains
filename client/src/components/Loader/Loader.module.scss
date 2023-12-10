@@ -1,0 +1,16 @@
+.loader{
+  width: 100%;
+  display: flex;
+  place-items: center;
+  height: 5dvh;
+  padding: .5rem;
+  animation: load infinite 1s linear;
+}
+@keyframes load {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../consts/colors.scss";
+.header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  padding-left: 2rem;
+}
+.icon{
+  >svg{
+    color: $blue;
+    filter: drop-shadow(0 0 .05rem $black);
+  }
+}
+@media (max-width:480px) {
+  .header{
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+    >*{
+      font-size: 12pt;
+    }
+  }
+  .icon{
+    rotate: 90deg;
+    scale: .6;
+  }
+}

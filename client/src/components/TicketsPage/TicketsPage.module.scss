@@ -1,0 +1,16 @@
+@import "../../consts/colors.scss";
+.page{
+  width: 95%;
+  height: 75dvh;
+  padding: 1rem;
+  background: $gray;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+
+  overflow-y: auto;
+}

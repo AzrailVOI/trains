@@ -1,0 +1,21 @@
+@import "../../consts/colors.scss";
+.item{
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  height: min-content;
+  background: $dark_blue;
+  border-radius: .7rem;
+  padding: .5rem;
+  outline: .15rem solid $black;
+  &[data-way="true"]{
+    box-shadow: 0 0 .5rem $green;
+  }
+  &_head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

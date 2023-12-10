@@ -1,0 +1,77 @@
+@import "../../consts/colors.scss";
+.bubble{
+  display: inline-flex;
+  text-align: center;
+  background-color: $blue;
+  padding: .7rem 1.5rem;
+  border-radius: .7rem;
+  outline: .15rem solid $black;
+  font-size: 20pt;
+  &[data-type='main']{
+    font-weight: 600;
+  }
+  &[data-type='text']{
+    font-size: 15pt;
+    padding: .3rem .7rem;
+    outline: none;
+    border: .15rem solid $black;
+  }
+  &[data-type='search']{
+    font-size: 15pt;
+    padding: .5rem 1rem;
+  }
+  &[data-type='ticket']{
+    font-size: 12pt;
+    padding: .3rem .7rem;
+    position: relative;
+    >span{
+      font-weight: 600;
+      text-align: left;
+      width: 80%;
+    }
+    > .button{
+      cursor: pointer;
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $blue;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 0 .7rem .7rem 0;
+      padding: .3rem;
+      border-left: .15rem solid $black;
+      &:hover{
+        background: rgba(0,0,0,.2);
+        border-radius: 0 .7rem .7rem 0;
+      }
+      > svg{
+        width: 100%;
+        //scale: 1.7;
+        height: 100%;
+      }
+
+    }
+  }
+}
+@media (max-width:480px) {
+  .bubble{
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    outline: .15rem solid $black;
+    font-size: 20pt;
+    &[data-type='main']{
+      font-weight: 600;
+    }
+    &[data-type='text']{
+      font-size: 10pt;
+      padding: .3rem .5rem;
+    }
+    &[data-type='search']{
+      font-size: 10pt;
+      padding: .3rem .5rem;
+    }
+  }
+}

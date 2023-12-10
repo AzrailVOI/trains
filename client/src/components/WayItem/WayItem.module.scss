@@ -1,0 +1,26 @@
+@import "../../consts/colors.scss";
+.root{
+  &:first-child{
+    border-top: .15rem solid $black;
+  }
+  border-bottom: .15rem solid $black;
+  //display: flex;
+  background: $blue;
+  //justify-content: center;
+  font-size: 15pt;
+  display: grid;
+  grid-template-columns: 1fr 1fr .1fr 1fr 1fr;
+}
+.item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  &[data-city="true"]{
+    padding-right: .5rem;
+    &:hover{
+      background: $gray05;
+      cursor: pointer;
+    }
+  }
+}
